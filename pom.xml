@@ -19,6 +19,7 @@
   </properties>
 
  <dependencies>
+    <!-- Download testng.jar -->
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
