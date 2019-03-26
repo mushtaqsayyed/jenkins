@@ -20,10 +20,10 @@ public class AppTest
 	public void test() {
 		System.setProperty("webdriver.chrome.driver", "/Users/mushtaq/Documents/JarFiles/Webdriver/ChromeJar/chromedriver");
 	    WebDriver driver = new ChromeDriver();
-		driver.get("http://localhost:80");
+		driver.get("http://www.google.com");
 		driver.manage().window().maximize();
 		
-		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	
 		try {
 			Thread.sleep(2000);
@@ -34,11 +34,11 @@ public class AppTest
 		
 		
 
-		assertEquals(true, driver.findElement(By.xpath("//h1[text()='Hello World']")).isDisplayed());
+		assertEquals(true, driver.findElement(By.name("q")).isDisplayed());
 		
 		
 		
-		driver.close();
+		driver.quit();
 		
 		
 		
